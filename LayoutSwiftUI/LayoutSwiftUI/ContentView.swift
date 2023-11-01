@@ -9,26 +9,29 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack(spacing: 10.0) {
-            Text("Meu primeiro Elemento")
-            Text("Meu segundo Elemento")
-            Text("Meu terceiro Elemento")
+        VStack {
+            HStack {
+                Group {
+                    Image(systemName: "circle.fill")
+                    Image(systemName: "triangle.fill")
+                    Image(systemName: "rectangle.fill")
+                }
+                .frame(width: 100, height: 100)
+                .background(Color.orange)
+                .aspectRatio(contentMode: .fit)
+            }
+            HStack {
+                Group {
+                    Image(systemName: "square.fill")
+                    Image(systemName: "rectangle.fill")
+                    Image(systemName: "triangle.fill")
+                }
+                .frame(width: 100, height: 100)
+                .background(Color.green)
+                .aspectRatio(contentMode: .fit)
+                .imageScale(.small)
+            }
         }
-//        HStack {
-//            Image(systemName: "circle.fill")
-//            Image(systemName: "square.fill")
-//            Image(systemName: "triangle.fill")
-//        }
-//        ZStack {
-//            Rectangle()
-//                .fill(Color.blue)
-//                .frame(width: 100, height: 100)
-//            Circle()
-//                .fill(Color.red)
-//                .frame(width: 100, height: 100)
-//            Text("ZStack")
-//                .bold()
-//        }
     }
 }
 
